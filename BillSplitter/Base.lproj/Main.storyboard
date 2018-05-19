@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Bill" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gBK-ux-8rW">
+                                <rect key="frame" x="16" y="20" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="u7M-sU-lYn">
+                                <rect key="frame" x="14" y="83" width="347" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="0kS-Bf-MOR"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="sNb-uZ-IgQ"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nnu-Mj-JId">
+                                <rect key="frame" x="164" y="144" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="calculateSplit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F3D-sH-6RO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10A-yj-lyf">
+                                <rect key="frame" x="16" y="209" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVB-5J-xWJ">
+                                <rect key="frame" x="16" y="265" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nnu-Mj-JId" firstAttribute="centerX" secondItem="gBK-ux-8rW" secondAttribute="centerX" id="3gt-k0-dqT"/>
+                            <constraint firstItem="u7M-sU-lYn" firstAttribute="top" secondItem="gBK-ux-8rW" secondAttribute="bottom" constant="33" id="OGx-cy-ZKS"/>
+                            <constraint firstItem="gBK-ux-8rW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PgB-ps-b2o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fVB-5J-xWJ" secondAttribute="trailing" constant="16" id="S33-Yf-OR5"/>
+                            <constraint firstItem="Nnu-Mj-JId" firstAttribute="top" secondItem="u7M-sU-lYn" secondAttribute="bottom" constant="32" id="UB7-l4-egF"/>
+                            <constraint firstItem="fVB-5J-xWJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Wdk-93-UQF"/>
+                            <constraint firstItem="fVB-5J-xWJ" firstAttribute="top" secondItem="10A-yj-lyf" secondAttribute="bottom" constant="35" id="Ydd-Iv-BlL"/>
+                            <constraint firstItem="gBK-ux-8rW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="b6t-q5-zkm"/>
+                            <constraint firstItem="u7M-sU-lYn" firstAttribute="leading" secondItem="10A-yj-lyf" secondAttribute="leading" id="ctH-rC-KSD"/>
+                            <constraint firstItem="10A-yj-lyf" firstAttribute="top" secondItem="Nnu-Mj-JId" secondAttribute="bottom" constant="35" id="ldQ-dU-DXB"/>
+                            <constraint firstItem="gBK-ux-8rW" firstAttribute="leading" secondItem="u7M-sU-lYn" secondAttribute="leading" id="n52-4B-t1M"/>
+                            <constraint firstItem="u7M-sU-lYn" firstAttribute="centerX" secondItem="gBK-ux-8rW" secondAttribute="centerX" id="orb-8j-n1J"/>
+                            <constraint firstItem="10A-yj-lyf" firstAttribute="centerX" secondItem="gBK-ux-8rW" secondAttribute="centerX" id="qHh-K1-tgZ"/>
+                            <constraint firstItem="gBK-ux-8rW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="y1w-x2-O6O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="billSum" destination="gBK-ux-8rW" id="4F7-6S-dfN"/>
+                        <outlet property="numberOfPeople" destination="u7M-sU-lYn" id="VoS-ZQ-sOK"/>
+                        <outlet property="sliderLabel" destination="10A-yj-lyf" id="Z9v-uT-BHK"/>
+                        <outlet property="splitAmountLabel" destination="fVB-5J-xWJ" id="tCg-4i-kiD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
